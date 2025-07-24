@@ -5,13 +5,9 @@ export default async function CommentsDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
   const { id } = await params;
-
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/comments/${id}`
-  );
-  const comment = await res.json();
+  const res = await fetch(`http://localhost:3000/api/comments/${id}`);
+  const { comment } = await res.json();
 
   return (
     <div>

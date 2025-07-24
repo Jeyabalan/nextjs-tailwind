@@ -5,6 +5,7 @@ export default async function MenuPage() {
     { name: "Home", path: "/" },
     { name: "Posts", path: "/posts" },
     { name: "Comments", path: "/comments" },
+    { name: "Todos", path: "/todos" },
   ];
 
   return (
